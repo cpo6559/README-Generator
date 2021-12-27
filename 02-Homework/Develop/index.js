@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
-var generateREADME = require("./package.json")
+var generateREADME = require("");
+var theInquirer = require ('inquirer');
+
 // TODO: Create an array of questions for user input
 const questions = [
     {

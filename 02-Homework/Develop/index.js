@@ -1,42 +1,49 @@
 // TODO: Include packages needed for this application
 var generateREADME = require("");
 var theInquirer = require ('inquirer');
+const Choices = require("inquirer/lib/objects/choices");
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: "input",
-        message: "",
-        name: ""
+        message: "What's your GitHub username?",
+        name: "username"
     },
     {
         type: "input",
-        message: "",
-        name: ""
+        message: "What is your GitHub profile link?",
+        name: "GitHub Profile Link"
     },
     {
         type: "input",
-        message: "",
-        name: ""
+        message: "What is your email?",
+        name: "email"
     },
 
     {
         type: "input",
-        message: "",
-        name: ""
+        message: "What is the title of your repository?",
+        name: "name of repository"
     },
     {
         type: "input",
-        message: "",
-        name: ""
+        message: "How would you describe the repository?",
+        name: "description"
     }, {
         type: "input",
-        message: "",
-        name: ""
+        message: "Can others contribute?",
+        name: "contribute"
     }, {
         type: "input",
-        message: "",
-        name: ""
+        message: "Which, if any, liscence would you like to use? ",
+        name: "license",
+        choices: [
+        "APACHE 2.O",
+        "BSD 3",
+        "GVL-GPL 3.0",
+        "MIT",
+        "None"]
     }, {
         type: "input",
         message: "",

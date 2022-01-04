@@ -1,12 +1,12 @@
 # cpo6559 
       ##Profile Link
-      a
+      https://github.com/cpo6559
 
 
   ## Repository Name
-  Hi
+  README-Generator
   ## Description 
-  goof
+  Create professional readme quickly and accurately.
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -16,16 +16,16 @@
   * [Questions](#questions)
   
   ## Installation 
-  
+  None
 
   ## License 
-  This project is license under GNU-GPL 3.0
+  This project is license under None
   ## Contributing 
-  no
+  No
   ## Tests
-  none
+  None
   ## Questions
-  Questions? Please contact me directly at undefined.
+  Questions? Please contact me directly at cpierrelouis37@gmail.com.
 
 
   

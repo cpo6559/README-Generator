@@ -67,8 +67,9 @@ function renderLicenseLink(license) {
 
     // TODO: Create a function to generate markdown for README
     function generateMarkdown(data) {
-      return `# ${data.Username} 
-      ##Profile Link
+      return `# 
+      ##Profile 
+      ${data.Username} 
       ${data.GitHubProfileLink}
 
 
@@ -78,21 +79,23 @@ function renderLicenseLink(license) {
   ${data.Description}
   ## Table of Contents
   * [Installation](#installation)
-  * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
   
   ## Installation 
-  ${data.RequiredDependencies}
+  Clone the repo. If any additiona; installation requirements are needed, it'd be here: ${data.RequiredDependencies}
 
   ## License 
   This project is license under ${data.License}
+  
   ## Contributing 
   ${data.Contribute}
+  
   ## Tests
-  ${data.Testing}
+  Use the application. Additional testing methods would be here: ${data.Testing}
+  
   ## Questions
   Questions? Please contact me directly at ${data.Email}.
 

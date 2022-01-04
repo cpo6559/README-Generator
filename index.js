@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-var  generateMarkdown = require("./generateMarkdown");
+var generateMarkdown = require("./generateMarkdown");
 var theInquirer = require("inquirer");
 const fs = require("fs");
 const Choices = require("inquirer/lib/objects/choices");
@@ -21,7 +21,6 @@ const questions = [
         message: "What is your email?",
         name: "Email"
     },
-
     {
         type: "input",
         message: "What is the title of your repository?",

@@ -8,38 +8,68 @@ const licensebadge = [
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === licensebadge[0]) {
-    return "[![License]("https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0")""
-  
-  } else if (license === licensebadge[1]){
-    return [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+
+  } else if (license === licensebadge[1]) {
+    return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
 
 
-  } else if (license === licensebadge[2]){
-    return [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
+  } else if (license === licensebadge[2]) {
+    return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
 
   } else if (license === licensebadge[3]) {
-    ""
-return [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-
-
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
   } else {
-    return " "
+    return ""
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+  if (license === licensebadge[0]) {
+    return "(https://opensource.org/licenses/Apache-2.0)"
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
+  } else if (license === licensebadge[1]) {
+    return "(https://opensource.org/licenses/BSD-3-Clause)"
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.Username} ${data.GitHubProfileLink}
+
+  } else if (license === licensebadge[2]) {
+    return "(https://www.gnu.org/licenses/gpl-3.0)"
+
+  } else if (license === licensebadge[3]) {
+    return "(https://opensource.org/licenses/MIT)"
+  } else {
+    return ""
+  }
+  }
+
+  // TODO: Create a function that returns the license section of README
+  // If there is no license, return an empty string
+  function renderLicenseSection(license) {
+    if (license === licensebadge[0]) {
+      return `For more information about ${licensebadge[0]}, read here:`
+  
+    } else if (license === licensebadge[1]) {
+      return `For more information about ${licensebadge[1]}, read here:`
+  
+  
+    } else if (license === licensebadge[2]) {
+      return `For more information about ${licensebadge[2]}, read here:`
+  
+    } else if (license === licensebadge[3]) {
+      return `For more information about ${licensebadge[3]}, read here:`
+    } else {
+      return ""
+    }
+     
+    }
+
+    // TODO: Create a function to generate markdown for README
+    function generateMarkdown(data) {
+      return `# ${data.Username} 
+      ##Profile Link
+      ${data.GitHubProfileLink}
 
 
   ## Repository Name
@@ -56,8 +86,7 @@ function generateMarkdown(data) {
   
   ## Installation 
   ${data.RequiredDependencies}
-  ## Usage 
-  ${data.usage}
+
   ## License 
   This project is license under ${data.License}
   ## Contributing 
@@ -65,10 +94,10 @@ function generateMarkdown(data) {
   ## Tests
   ${data.Testing}
   ## Questions
-  If you have any questions about this project or any other repository on my GitHub, please contact me directly at ${data.email}.
-`;
-}
+  Questions? Please contact me directly at ${data.Email}.
 
 
+  `;
+  }
 // use for importing Markdown in index 
 module.exports = generateMarkdown;

@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
-var generateMarkdown = require("./utils/generateMarkdown");
-var theInquirer = require('inquirer');
-const fs = require("fs")
+var  generateMarkdown = require("./generateMarkdown");
+var theInquirer = require("inquirer");
+const fs = require("fs");
 const Choices = require("inquirer/lib/objects/choices");
 
 // TODO: Create an array of questions for user input
@@ -14,7 +14,7 @@ const questions = [
     {
         type: "input",
         message: "What is your GitHub profile link?",
-        name: "GitHub Profile Link"
+        name: "GitHubProfileLink"
     },
     {
         type: "input",
@@ -25,7 +25,7 @@ const questions = [
     {
         type: "input",
         message: "What is the title of your repository?",
-        name: "Repository Name"
+        name: "RepositoryName"
     },
     {
         type: "input",
@@ -36,19 +36,19 @@ const questions = [
         message: "Can others contribute?",
         name: "Contribute"
     }, {
-        type: "input",
-        message: "Which, if any, liscence would you like to use? ",
+        type: "list",
+        message: "Which, if any, licence would you like to use? ",
         name: "License",
         choices: [
             "APACHE 2.O",
             "BSD 3",
-            "GVL-GPL 3.0",
+            "GNU-GPL 3.0",
             "MIT",
             "None"]
     }, {
         type: "input",
         message: "What dependencies are required to run this app? ",
-        name: "Required Dependencies"
+        name: "RequiredDependencies"
     }, {
         type: "input",
         message: "What command is needed to test this app?",
@@ -56,9 +56,15 @@ const questions = [
     },
 ];
 
+function readMeTemplate(data) {
+    return `
+    ${data.Username}
+    
+    `
+}
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile("./ReadMe.md/" + fileName, data, function (err) {
+    fs.writeFile("./ReadMe/" + fileName, data, function (err) {
         if (err) {
             return console.log(err)
         }
@@ -67,7 +73,7 @@ function writeToFile(fileName, data) {
 }
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(function (data) {
+    theInquirer.prompt(questions).then(function (data) {
         writeToFile("DemoREADME.md", generateMarkdown(data))
     }
 )}
